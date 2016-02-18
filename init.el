@@ -1,6 +1,6 @@
 ;;; init.el --- init.el file for Emacs
 
-;; Copyright (C) 2015 Marc Nieper-Wißkirchen
+;; Copyright (C) 2015-2016 Marc Nieper-Wißkirchen
 
 (global-font-lock-mode 1)
 
@@ -18,6 +18,7 @@
 (put 'let-values* 'scheme-indent-function 1)
 (put 'and-let* 'scheme-indent-function 1)
 (put 'parameterize 'scheme-indent-function 1)
+(put 'guard 'scheme-indent-function 1)
 (put 'for 'scheme-indent-function 1)
 (put 'for* 'scheme-indent-function 1)
 
@@ -25,6 +26,7 @@
 			'(("(\\(when\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(unless\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(parameterize\\)\\>" 1 font-lock-keyword-face)
+			  ("(\\(guard\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(let-values\\*\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(and-let\\*\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(include\\)\\>" 1 font-lock-keyword-face)
