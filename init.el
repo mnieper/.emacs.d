@@ -34,6 +34,7 @@
 			  ("(\\(and-let\\*\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(include\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(define-library\\)\\>" 1 font-lock-keyword-face)
+			  ("(\\(define-values\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(define-record-type\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(let-cc\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(for\\)\\>" 1 font-lock-keyword-face)
