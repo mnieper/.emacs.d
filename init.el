@@ -21,6 +21,8 @@
 (put 'guard 'scheme-indent-function 1)
 (put 'for 'scheme-indent-function 1)
 (put 'for* 'scheme-indent-function 1)
+(put 'syntax-rules 'scheme-indent-function 'defun) ; should be
+						; scheme-let-indent
 
 (font-lock-add-keywords 'scheme-mode
 			'(("(\\(when\\)\\>" 1 font-lock-keyword-face)
@@ -28,6 +30,7 @@
 			  ("(\\(parameterize\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(guard\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(let-values\\*\\)\\>" 1 font-lock-keyword-face)
+			  ("(\\(define-values\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(and-let\\*\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(include\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(define-library\\)\\>" 1 font-lock-keyword-face)
