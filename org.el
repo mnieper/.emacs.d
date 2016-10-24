@@ -10,7 +10,7 @@
 (setq org-latex-listings t)
 (setq org-latex-listings-options
       '(("basicstyle" "\\ttfamily")
-	("columns" "flexible")
+	("columns" "fixed")
 	("literate" "{<<}{<<}1 {>>}{>>}1")))
 (add-to-list 'org-latex-packages-alist '("" "listings"))
 (add-to-list 'org-latex-packages-alist '("" "color"))
