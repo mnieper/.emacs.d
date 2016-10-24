@@ -1,4 +1,6 @@
+/elpa
+/session.*
+/.org*
 *~
 auto-save-list
 url
-
