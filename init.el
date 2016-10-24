@@ -8,6 +8,31 @@
       show-paren-style 'parenthesis)
 (show-paren-mode 1)
 
+;; Geiser
+
+(setq geiser-default-implementation 'guile)
+
+;; Org-mode
+
+(require 'ox-beamer)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((scheme . t)))
+(setq org-confirm-babel-evaluate nil)
+
+(setq org-latex-listings t)
+(setq org-latex-listings-options
+      '(("basicstyle" "\\ttfamily")
+	("columns" "flexible")))
+(add-to-list 'org-latex-packages-alist '("" "listings"))
+(add-to-list 'org-latex-packages-alist '("" "color"))
+
+;; AUCTeX
+
+(setq-default TeX-master nil)
+
+;; scheme-mode
+
 (setq scheme-program-name "chibi-scheme -mchibi.repl -e(repl)")
 
 (add-to-list 'auto-mode-alist '("\\.sld\\'" . scheme-mode))
@@ -42,6 +67,29 @@
 			  ("(\\(case-lambda\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(include\\)\\>" 1 font-lock-keyword-face)))
 			  
-;; Local Variables:
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(safe-local-variable-values
+   (quote
+    ((eval font-lock-add-keywords
+	   (quote scheme-mode)
+	   (quote
+	    (("(\\(receive\\)\\>" 1 font-lock-keyword-face))))
+     (eval font-lock-add-keywords
+	   (quote scheme-mode)
+	   (quote
+	    (("(\\(define-syntactic-environment\\)\\>" 1 font-lock-keyword-face)
+	     ("(\\(define-auxiliary-syntax\\)\\>" 1 font-lock-keyword-face)
+	     ("(\\(define-transformer\\)\\>" 1 font-lock-keyword-face))))))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+ ;; Local Variables:
 ;; mode: emacs-lisp
 ;; End:
