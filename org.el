@@ -11,6 +11,7 @@
 (setq org-latex-listings-options
       '(("basicstyle" "\\ttfamily")
 	("columns" "fixed")
+	("gobble" "2")
 	("literate" "{<<}{<<}1 {>>}{>>}1")))
 (add-to-list 'org-latex-packages-alist '("" "listings"))
 (add-to-list 'org-latex-packages-alist '("" "color"))
@@ -19,5 +20,6 @@
 
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((scheme . t)))
+ '((emacs-lisp . t)
+   (scheme . t)))
 (setq org-confirm-babel-evaluate nil)
