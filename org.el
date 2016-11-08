@@ -7,6 +7,8 @@
 (require 'ox-latex)
 (require 'ox-beamer)
 
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+
 (setq org-latex-listings t)
 (setq org-latex-listings-options
       '(("basicstyle" "\\ttfamily")
@@ -16,6 +18,8 @@
 (add-to-list 'org-latex-packages-alist '("" "listings"))
 (add-to-list 'org-latex-packages-alist '("" "color"))
 
+(setq org-latex-listings 'minted)
+
 (setq org-src-preserve-indentation t)
 
 (org-babel-do-load-languages
@@ -23,3 +27,9 @@
  '((emacs-lisp . t)
    (scheme . t)))
 (setq org-confirm-babel-evaluate nil)
+
+(setq org-latex-pdf-process
+      '("pdflatex --shell-escape -interaction nonstopmode -output-directory %o %f"
+	"pdflatex --shell-escape -interaction nonstopmode -output-directory %o %f"
+	"pdflatex --shell-escape -interaction nonstopmode -output-directory %o %f"))
+
