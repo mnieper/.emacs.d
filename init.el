@@ -7,15 +7,10 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
 (load "~/.emacs.d/org.el")
+(load "~/.emacs.d/scheme.el")
 
 ;; Asm Mode
 (setq asm-comment-char ?#)
-
-;; Paredit
-(add-hook 'scheme-mode-hook 'enable-paredit-mode)
-
-;; Outline Mode
-(add-hook 'scheme-mode-hook 'outline-minor-mode)
 
 (require 'cc-mode)
 (require 'font-lock)
@@ -32,10 +27,6 @@
 
 ;; scheme-mode
 
-(setq scheme-program-name "chibi-scheme -mchibi.repl -e(repl)")
-
-(add-to-list 'auto-mode-alist '("\\.sld\\'" . scheme-mode))
-
 (put 'when 'scheme-indent-function 'defun)
 (put 'unless 'scheme-indent-function 'defun)
 (put 'let-cc 'scheme-indent-function 'defun)
@@ -45,8 +36,6 @@
 (put 'guard 'scheme-indent-function 1)
 (put 'for 'scheme-indent-function 1)
 (put 'for* 'scheme-indent-function 1)
-(put 'syntax-rules 'scheme-indent-function 'defun) ; should be
-						; scheme-let-indent
 
 (font-lock-add-keywords 'scheme-mode
 			'(("(\\(when\\)\\>" 1 font-lock-keyword-face)
@@ -65,6 +54,59 @@
 			  ("(\\(for*\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(case-lambda\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(include\\)\\>" 1 font-lock-keyword-face)))
-;; Local Variables:
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(safe-local-variable-values
+   (quote
+    ((eval font-lock-add-keywords
+	   (quote scheme-mode)
+	   (quote
+	    (("(\\(match\\)\\>" 1 font-lock-keyword-face)
+	     ("(\\(match\\*\\)\\>" 1 font-lock-keyword-face))))
+     (eval font-lock-add-keywords
+	   (quote scheme-mode)
+	   (quote
+	    (("(\\(match\\)\\>" 1 font-lock-keyword-face)
+	     ("(\\(match*\\)\\>" 1 font-lock-keyword-face))))
+     (eval font-lock-add-keywords
+	   (quote scheme-mode)
+	   (quote
+	    (("(\\(syntax-match\\)\\>" 1 font-lock-keyword-face))))
+     (eval font-lock-add-keywords
+	   (quote scheme-mode)
+	   (quote
+	    (("(\\(match\\)\\>" 1 font-lock-keyword-face))))
+     (eval font-lock-add-keywords
+	   (quote scheme-mode)
+	   (quote
+	    (("(\\(ck-macro-transformer\\)\\>" 1 font-lock-keyword-face))))
+     (eval font-lock-add-keywords
+	   (quote scheme-mode)
+	   (quote
+	    (("(\\(scheme-define-syntax\\)\\>" 1 font-lock-keyword-face)
+	     ("(\\(scheme-syntax-rules\\)\\>" 1 font-lock-keyword-face))))
+     (eval font-lock-add-keywords
+	   (quote scheme-mode)
+	   (quote
+	    (("(\\(test-assert\\)\\>" 1 font-lock-keyword-face)
+	     ("(\\(test-eqv\\)\\>" 1 font-lock-keyword-face)
+	     ("(\\(test-group\\)\\>" 1 font-lock-keyword-face)
+	     ("(\\(test-equal\\)\\>" 1 font-lock-keyword-face))))
+     (eval font-lock-add-keywords
+	   (quote scheme-mode)
+	   (quote
+	    (("(\\(test-assert\\)\\>" 1 font-lock-keyword-face)
+	     ("(\\(test-eqv\\)\\>" 1 font-lock-keyword-face)
+	     ("(\\(test-equal\\)\\>" 1 font-lock-keyword-face))))))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+ ;; Local Variables:
 ;; mode: emacs-lisp
 ;; End:
