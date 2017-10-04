@@ -25,6 +25,8 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((emacs-lisp . t)
+   (python . t)
+   (latex . t)
    (scheme . t)))
 (setq org-confirm-babel-evaluate nil)
 

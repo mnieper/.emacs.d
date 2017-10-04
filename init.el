@@ -73,9 +73,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
+ '(org-export-allow-bind-keywords t)
  '(safe-local-variable-values
    (quote
-    ((eval font-lock-add-keywords
+    ((TeX-command-extra-options . "-shell-escape")
+     (eval font-lock-add-keywords
 	   (quote scheme-mode)
 	   (quote
 	    (("(\\(em-syntax-rules\\)\\>" 1 font-lock-keyword-face))))
