@@ -6,8 +6,17 @@
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
+(load "~/.emacs.d/whitespace.el")
 (load "~/.emacs.d/org.el")
 (load "~/.emacs.d/scheme.el")
+
+;;; Outline mode
+
+;; Add key bindings for Org-style outline cycling
+(add-hook 'outline-minor-mode-hook
+  (lambda ()
+    (define-key outline-minor-mode-map [(control tab)] 'org-cycle)
+    (define-key outline-minor-mode-map [(shift tab)] 'org-global-cycle)))
 
 ;; Asm Mode
 (setq asm-comment-char ?#)
@@ -36,6 +45,8 @@
 (put 'guard 'scheme-indent-function 1)
 (put 'for 'scheme-indent-function 1)
 (put 'for* 'scheme-indent-function 1)
+(put 'with-continuation-mark 'scheme-indent-function 2)
+(put 'call-with-immediate-continuation-mark 'scheme-indent-function 1)
 
 (font-lock-add-keywords 'scheme-mode
 			'(("(\\(when\\)\\>" 1 font-lock-keyword-face)
@@ -52,6 +63,8 @@
 			  ("(\\(let-cc\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(for\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(for*\\)\\>" 1 font-lock-keyword-face)
+			  ("(\\(with-continuation-mark\\)\\>" 1 font-lock-keyword-face)
+			  ("(\\(call-with-immediate-continuation-mark\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(case-lambda\\)\\>" 1 font-lock-keyword-face)
 			  ("(\\(include\\)\\>" 1 font-lock-keyword-face)))
 (custom-set-variables
@@ -59,9 +72,31 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(inhibit-startup-screen t)
  '(safe-local-variable-values
    (quote
     ((eval font-lock-add-keywords
+	   (quote scheme-mode)
+	   (quote
+	    (("(\\(em-syntax-rules\\)\\>" 1 font-lock-keyword-face))))
+     (TeX-command-extra-options . "-shell-escape")
+     (TeX-master . "skript")
+     (eval font-lock-add-keywords
+	   (quote scheme-mode)
+	   (quote
+	    (("(\\(call-with-syntactic-continuation\\)\\>" 1 font-lock-keyword-face)
+	     ("(\\(call-with-cps-transform\\)\\>" 1 font-lock-keyword-face)
+	     ("(\\(call-with-cps-transform*\\)\\>" 1 font-lock-keyword-face))))
+     (eval font-lock-add-keywords
+	   (quote scheme-mode)
+	   (quote
+	    (("(\\(call-with-syntactic-continuation\\)\\>" 1 font-lock-keyword-face))))
+     (TeX-master . t)
+     (eval font-lock-add-keywords
+	   (quote scheme-mode)
+	   (quote
+	    (("(\\(receive\\)\\>" 1 font-lock-keyword-face))))
+     (eval font-lock-add-keywords
 	   (quote scheme-mode)
 	   (quote
 	    (("(\\(match\\)\\>" 1 font-lock-keyword-face)

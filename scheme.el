@@ -9,3 +9,5 @@
 			      (put 'syntax-rules 'scheme-indent-function 'defun)
 			      (setq comment-start-skip
 				    ";+[ \t>]*")))
+
+(setq geiser-default-implementation 'guile)
