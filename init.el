@@ -76,7 +76,691 @@
  '(org-export-allow-bind-keywords t)
  '(safe-local-variable-values
    (quote
-    ((TeX-command-extra-options . "-shell-escape")
+    ((eval progn
+	   (put
+	    (quote annotation)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote with-syntax)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote test-group)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote test-error)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote match)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote set-record-type-printer!)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote syntax-parameterize)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $top-level)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $define-module)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote $with-standard-syntax)
+	    (quote scheme-indent-function)
+	    0)
+	   (put
+	    (quote global)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote meta)
+	    (quote scheme-indent-function)
+	    2)
+	   (font-lock-add-keywords nil
+				   (quote
+				    (("(\\($top-level\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($define-module\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($with-standard-syntax\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(with-syntax\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(define-syntax-parameter\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-parameterize\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(expression-match\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(vector-for-each\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (eval progn
+	   (put
+	    (quote annotate)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote with-syntax)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote test-group)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote test-error)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote match)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote set-record-type-printer!)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote syntax-parameterize)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $top-level)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $define-module)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote $with-standard-syntax)
+	    (quote scheme-indent-function)
+	    0)
+	   (put
+	    (quote global)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote meta)
+	    (quote scheme-indent-function)
+	    2)
+	   (font-lock-add-keywords nil
+				   (quote
+				    (("(\\($top-level\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($define-module\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($with-standard-syntax\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(with-syntax\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(define-syntax-parameter\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-parameterize\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(expression-match\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(vector-for-each\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (eval font-lock-add-keywords nil
+	   (quote
+	    (("\\(define-global!\\)\\>" 1 font-lock-keyword-face)
+	     ("\\(define-core!\\)\\>" 1 font-lock-keyword-face)
+	     ("\\(define-primitive!\\)\\>" 1 font-lock-keyword-face))))
+     (eval font-lock-add-keywords nil
+	   (quote
+	    (("\\(define-global!\\)\\>" 1 font-lock-keyword-face)
+	     ("\\(define-primitive!\\)\\>" 1 font-lock-keyword-face))))
+     (eval progn
+	   (put
+	    (quote with-syntax)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote test-group)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote test-error)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote match)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote set-record-type-printer!)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote syntax-parameterize)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $top-level)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $define-module)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote $with-standard-syntax)
+	    (quote scheme-indent-function)
+	    0)
+	   (put
+	    (quote global)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote meta)
+	    (quote scheme-indent-function)
+	    2)
+	   (font-lock-add-keywords nil
+				   (quote
+				    (("(\\($top-level\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($define-module\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($with-standard-syntax\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(with-syntax\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(define-syntax-parameter\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-parameterize\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(expression-match\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(vector-for-each\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (eval progn
+	   (put
+	    (quote test-group)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote test-error)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote expression-match)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote syntax-parameterize)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $top-level)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $define-module)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote $with-standard-syntax)
+	    (quote scheme-indent-function)
+	    0)
+	   (put
+	    (quote global)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote meta)
+	    (quote scheme-indent-function)
+	    2)
+	   (font-lock-add-keywords nil
+				   (quote
+				    (("(\\($top-level\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($define-module\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($with-standard-syntax\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(define-syntax-parameter\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-parameterize\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(expression-match\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(vector-for-each\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (eval progn
+	   (put
+	    (quote syntax-match)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote syntax-parameterize)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $top-level)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $define-module)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote $with-standard-syntax)
+	    (quote scheme-indent-function)
+	    0)
+	   (put
+	    (quote global)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote meta)
+	    (quote scheme-indent-function)
+	    2)
+	   (font-lock-add-keywords nil
+				   (quote
+				    (("(\\($top-level\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($define-module\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($with-standard-syntax\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(define-syntax-parameter\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-parameterize\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-match\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(vector-for-each\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (eval progn
+	   (put
+	    (quote syntax-match)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote syntax-parameterize)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $top-level)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $define-module)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote global)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote meta)
+	    (quote scheme-indent-function)
+	    2)
+	   (font-lock-add-keywords nil
+				   (quote
+				    (("(\\($top-level\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($define-module\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(define-syntax-parameter\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-parameterize\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-match\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(vector-for-each\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (eval progn
+	   (put
+	    (quote syntax-match)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote syntax-parameterize)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $top-level)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $define-module)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote global)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote meta)
+	    (quote scheme-indent-function)
+	    2)
+	   (font-lock-add-keywords nil
+				   (quote
+				    (("(\\($top-level\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($define-module\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(define-syntax-parameter\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-parameterize\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-match\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(vector-for-each\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (eval font-lock-add-keywords nil
+	   (quote
+	    (("(\\(test-compile\\)\\>" 1 font-lock-keyword-face))))
+     (eval progn
+	   (put
+	    (quote syntax-match)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote syntax-parameterize)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $top-level)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $define-module)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote global)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote meta)
+	    (quote scheme-indent-function)
+	    2)
+	   (font-lock-add-keywords nil
+				   (quote
+				    (("(\\($top-level\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($define-module\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(define-syntax-parameter\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-parameterize\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-match\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (eval font-lock-add-keywords nil
+	   (quote
+	    (("(\\(test-expand\\)\\>" 1 font-lock-keyword-face))))
+     (eval progn
+	   (put
+	    (quote syntax-match)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote syntax-parameterize)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $top-level)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $define-module)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote global)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote meta)
+	    (quote scheme-indent-function)
+	    2)
+	   (font-lock-add-keywords nil
+				   (quote
+				    (("(\\($top-level\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($define-module\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(define-syntax-parameter\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-parameterize\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-match\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (eval progn
+	   (put
+	    (quote syntax-match)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $top-level)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $define-module)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote global)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote meta)
+	    (quote scheme-indent-function)
+	    2)
+	   (font-lock-add-keywords nil
+				   (quote
+				    (("(\\($top-level\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($define-module\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-match\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (eval progn
+	   (put
+	    (quote syntax-match)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $top-level)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $define-module)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote global)
+	    (quote scheme-indent-function)
+	    2)
+	   (font-lock-add-keywords nil
+				   (quote
+				    (("(\\($top-level\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($define-module\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-match\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(pair-fold-right\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (eval progn
+	   (put
+	    (quote syntax-call-with-match)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote syntax-match)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $top-level)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $define-module)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote global)
+	    (quote scheme-indent-function)
+	    2)
+	   (font-lock-add-keywords nil
+				   (quote
+				    (("(\\($top-level\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($define-module\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-match\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (eval progn
+	   (put
+	    (quote syntax-call-with-match)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote syntax-match)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $top-level)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $define-module)
+	    (quote scheme-indent-function)
+	    2)
+	   (font-lock-add-keywords nil
+				   (quote
+				    (("(\\($top-level\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\($define-module\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(syntax-match\\)\\>" 1 font-lock-keyword-face)
+				     ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (eval progn
+	   (put
+	    (quote syntax-call-with-match)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $top-level)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $define-module)
+	    (quote scheme-indent-function)
+	    2)
+	   (font-lock-add-keywords
+	    (quote scheme)
+	    (quote
+	     (("(\\($top-level\\)\\>" 1 font-lock-keyword-face)
+	      ("(\\($define-module\\)\\>" 1 font-lock-keyword-face)
+	      ("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+	      ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (eval progn
+	   (put
+	    (quote syntax-call-with-match)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $top-level)
+	    (quote scheme-indent-function)
+	    1)
+	   (put
+	    (quote $define-module)
+	    (quote scheme-indent-function)
+	    2)
+	   (font-lock-add-keywords
+	    (quote scheme)
+	    (quote
+	     (("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+	      ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (eval font-lock-add-keywords
+	   (quote scheme-mode)
+	   (quote
+	    (("(\\(test-expand\\)\\>" 1 font-lock-keyword-face))))
+     (eval progn
+	   (put
+	    (quote syntax-call-with-match)
+	    (quote scheme-indent-function)
+	    2)
+	   (put
+	    (quote letrec*)
+	    (quote scheme-indent-function)
+	    1)
+	   (font-lock-add-keywords
+	    (quote scheme)
+	    (quote
+	     (("(\\(call-with-values\\)\\>" 1 font-lock-keyword-face)
+	      ("(\\(letrec\\*\\)\\>" 1 font-lock-keyword-face)))))
+     (TeX-command-extra-options . "-shell-escape")
      (eval font-lock-add-keywords
 	   (quote scheme-mode)
 	   (quote
